@@ -177,6 +177,10 @@
   "Sub Category" : "الفئة الفرعية",
   "Create Sub Category" : "انشاء فئة الفرعية",
   "Edit Sub Category" : "تعديل الفئة الفرعية",
-  "Add Sub Category" : "فئة فرعية جديدة"
+  "Add Sub Category" : "فئة فرعية جديدة",
+
+  "Blogs": "المقالات والاخبار",
+  "Posts": "المنشورات",
+  "New post": "منشور جديد"
 
 }

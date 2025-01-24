@@ -39,8 +39,6 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'price' => 'required|numeric',
-            'sale_price' => 'nullable|numeric',
             'sub_category_id' => 'required|exists:sub_categories,id',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif',
             'summary' => 'nullable|string',
@@ -53,8 +51,6 @@ class ProductController extends Controller
 
         $data = $request->only([
             'name',
-            'price',
-            'sale_price',
             'sub_category_id',
             'summary',
             'description',
@@ -70,7 +66,7 @@ class ProductController extends Controller
             $data['image_url'] = $url;
         }
 
-        Product::create(array_merge($data, ['slug' => Str::slug($request->name)]));
+        Product::create(array_merge($data, ['slug' => Str::slug($request->name),'price' => 0, 'sale_price' => 0]));
 
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
@@ -92,8 +88,6 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'price' => 'required|numeric',
-            'sale_price' => 'nullable|numeric',
             'sub_category_id' => 'required|exists:sub_categories,id',
             'image' => 'nullable|image|mimes:jpg,png,jpeg,gif',
             'summary' => 'nullable|string',
@@ -106,8 +100,6 @@ class ProductController extends Controller
 
         $data = $request->only([
             'name',
-            'price',
-            'sale_price',
             'sub_category_id',
             'summary',
             'description',

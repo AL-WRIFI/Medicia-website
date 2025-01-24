@@ -45,6 +45,7 @@
                         <h3 class="widget-title">روابط سريعة</h3>
                         <ul class="clearfix">
                             <li><a href="{{route('index')}}">الرئيسية</a></li>
+                            <li><a href="{{route('user-blogs.index')}}">الأخبار</a></li>
                             <li><a href="{{ route('about') }}">من نحن</a></li>
                             <li><a href="{{ route('contact')}}">اتصل بنا</a></li>
                         </ul>

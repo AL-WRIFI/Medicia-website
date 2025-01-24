@@ -42,6 +42,22 @@
       ]
     },
     {
+      "name": "Blogs",
+      "slug": "app-ecommerce-order",
+      "submenu": [
+        {
+          "url": "admin/blogs",
+          "name": "Posts",
+          "slug": "app-ecommerce-category"
+        },
+        {
+          "url": "admin/blogs/create",
+          "name": "New post",
+          "slug": "app-ecommerce-sub-category"
+        }
+      ]
+    },
+    {
       "name": "Order",
       "slug": "app-ecommerce-order",
       "submenu": [

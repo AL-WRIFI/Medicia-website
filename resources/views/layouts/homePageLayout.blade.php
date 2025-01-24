@@ -275,7 +275,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="{{ route('blogs.index')}}">الاخبار</a>
+                                <a href="{{ route('user-blogs.index')}}">الاخبار</a>
                             </li>
                             <li><a href="{{ route('contact')}}">اتصل بنا</a></li>
                         </ul>
@@ -642,7 +642,7 @@
                     </ul>
                 </li> --}}
                 <li>
-                    <a href="{{route('blogs.index')}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">المدونة</a>
+                    <a href="{{route('user-blogs.index')}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">المدونة</a>
                 </li>
                 <li><a href="{{route('contact')}}">اتصل بنا</a></li>
             </ul>

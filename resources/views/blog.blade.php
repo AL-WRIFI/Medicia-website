@@ -42,11 +42,11 @@
                                 </ul>
                             </div>
                             <h3 class="item-title mb-3">
-                                <a href="{{ route('blogs.show', $post) }}">
+                                <a href="{{ route('user-blogs.show', $post) }}">
                                     {{ $post->title }}
                                 </a>
                             </h3>
-                            <a href="{{ route('blogs.show', $post) }}" class="btn-underline">اقرأ المزيد</a>
+                            <a href="{{ route('user-blogs.show', $post) }}" class="btn-underline">اقرأ المزيد</a>
                         </div>
                     </div>
                 </div>

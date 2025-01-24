@@ -20,11 +20,11 @@
     .item-image img {
         width: 100%;
         height: auto;
-        transition: opacity 0.3s ease; /* إضافة تأثير انتقالي للشفافية */
+        transition: opacity 0.3s ease;
     }
 
     .product-grid:hover img {
-        opacity: 0.5; /* زيادة شفافية الصورة عند التأشير */
+        opacity: 0.5; 
     }
 
     .btns-groupb {
@@ -32,23 +32,23 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        opacity: 0; /* إخفاء الأيقونة بشكل افتراضي */
+        opacity: 0; 
         transition: opacity 0.3s ease;
     }
 
     .product-grid:hover .btns-groub {
-        opacity: 1; /* إظهار الأيقونة عند التأشير */
+        opacity: 1; 
     }
 
     .btns-groub a {
-        font-size: 40px; /* حجم كبير للأيقونة */
-        color: rgba(0, 0, 0, 0.8); /* لون الأيقونة */
-        text-decoration: none; /* إزالة التسطير من الرابط */
+        font-size: 40px; 
+        color: rgba(0, 0, 0, 0.8); 
+        text-decoration: none; 
         transition: color 0.3s ease;
     }
 
     .btns-groub a:hover {
-        color: rgba(0, 0, 0, 1); /* تغيير لون الأيقونة عند التأشير */
+        color: rgba(0, 0, 0, 1);
     }
 </style>
 @endsection

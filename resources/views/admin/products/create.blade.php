@@ -163,9 +163,9 @@
     </div>
 
     <!-- Save Button -->
-    <div class="text-end mt-4">
+    {{-- <div class="text-end mt-4">
       <button type="submit" class="btn btn-primary">Save Product</button>
-    </div>
+    </div> --}}
   </form>
   <!-- /Form -->
 </div>

@@ -15,7 +15,7 @@
                     <div class="breadcrumb-nav ul-li-center clearfix">
                         <ul class="clearfix">
                             <li><a href="{{ route('index') }}">الرئيسية</a></li>
-                            <li><a href="{{ route('blogs.index') }}">المدونة</a></li>
+                            <li><a href="{{ route('user-blogs.index') }}">المدونة</a></li>
                             <li class="active">تفاصيل المدونة</li>
                         </ul>
                     </div>
@@ -82,12 +82,12 @@
                                 @foreach ($recentBlogs as $recentBlog)
                                     <li>
                                         <div class="blog-small clearfix">
-                                            <a href="{{ route('blogs.show', $recentBlog->id) }}" class="item-image">
+                                            <a href="{{ route('user-blogs.show', $recentBlog->id) }}" class="item-image">
                                                 <img src="{{ asset($recentBlog->image_url) }}" alt="{{ $recentBlog->title }}">
                                             </a>
                                             <div class="item-content">
                                                 <h4 class="item-title">
-                                                    <a href="{{ route('blogs.show', $recentBlog->id) }}">
+                                                    <a href="{{ route('user-blogs.show', $recentBlog->id) }}">
                                                         {{ $recentBlog->title }}
                                                     </a>
                                                 </h4>

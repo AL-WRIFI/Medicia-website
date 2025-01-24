@@ -1,9 +1,11 @@
 <?php
-use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\AdminBlogController;
+// use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\Categories\CategoryController;
 use App\Http\Controllers\Admin\Categories\EndCategoryController;
 use App\Http\Controllers\Admin\Categories\SubCategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\HomePageController;
 use Illuminate\Support\Facades\Route;
 
@@ -76,9 +78,9 @@ Route::resource('sub-categories', SubCategoryController::class);
 Route::resource('products', ProductController::class);
 
 
-// Route::prefix('admin')->group(function(){
-//     Route::resource('blogs', BlogController::class);
-// });
+Route::prefix('admin')->group(function(){
+    Route::resource('blogs', AdminBlogController::class);
+});
 
-Route::resource('blogs', BlogController::class);
+Route::resource('user-blogs', BlogController::class);
 
