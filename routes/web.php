@@ -1,8 +1,10 @@
 <?php
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\Categories\CategoryController;
 use App\Http\Controllers\Admin\Categories\EndCategoryController;
 use App\Http\Controllers\Admin\Categories\SubCategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Home\HomePageController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\EcommerceDashboard;
@@ -29,9 +31,22 @@ use App\Http\Controllers\language\LanguageController;
 
 Route::get('/lang/{locale}', [LanguageController::class, 'swap']);
 
+Route::get('/about', function(){
+    return view('about');
+})->name('about');
+
+Route::get('/contact', function(){
+    return view('contact');
+})->name('contact');
+
+
+
 
 // Main Page Route
-Route::get('/', [EcommerceDashboard::class, 'index'])->name('dashboard-analytics');
+Route::get('/admin', [EcommerceDashboard::class, 'index'])->name('dashboard-analytics');
+Route::get('/', [HomePageController::class, 'index'])->name('index');
+
+
 
 Route::get('/app/ecommerce/dashboard', [EcommerceDashboard::class, 'index'])->name('app-ecommerce-dashboard');
 Route::get('/app/ecommerce/product/list', [EcommerceProductList::class, 'index'])->name('app-ecommerce-product-list');
@@ -59,3 +74,11 @@ Route::resource('categories', CategoryController::class);
 Route::resource('sub-categories', SubCategoryController::class);
 
 Route::resource('products', ProductController::class);
+
+
+// Route::prefix('admin')->group(function(){
+//     Route::resource('blogs', BlogController::class);
+// });
+
+Route::resource('blogs', BlogController::class);
+
