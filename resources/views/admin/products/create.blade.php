@@ -63,11 +63,11 @@
             <div class="row mb-6">
               <div class="col">
                 <label class="form-label" for="ecommerce-product-price">Price</label>
-                <input type="number" class="form-control" id="ecommerce-product-price" placeholder="Price" name="price" aria-label="Product price" required>
+                <input type="number" class="form-control" id="ecommerce-product-price" placeholder="Price" name="price" aria-label="Product price" disabled>
               </div>
               <div class="col">
                 <label class="form-label" for="ecommerce-product-sale-price">Sale Price</label>
-                <input type="number" class="form-control" id="ecommerce-product-sale-price" placeholder="Sale Price" name="sale_price" aria-label="Product sale price">
+                <input type="number" class="form-control" id="ecommerce-product-sale-price" placeholder="Sale Price" name="sale_price" aria-label="Product sale price" disabled>
               </div>
             </div>
             <div class="mb-6">
