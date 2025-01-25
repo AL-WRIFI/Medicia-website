@@ -58,7 +58,7 @@
 
     /* تنسيق الصفحة بشكل عام */
     body {
-        font-family: 'Arial', sans-serif; /* تحديد خط النص */
+        /* font-family: 'Arial', sans-serif; تحديد خط النص */
         background-color: #f9f9f9; /* لون خلفية الصفحة */
     }
 

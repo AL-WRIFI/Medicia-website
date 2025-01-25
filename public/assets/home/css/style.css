@@ -19,6 +19,7 @@ Author 				:  Marvel Theme (https://themeforest.net/user/marvel_theme)
 
 ==================================================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 .custom-section {
     background-color: #ffffff;
     padding: 60px 20px;
@@ -102,7 +103,7 @@ header {
     background: rgb(243, 243, 244);
 }
 .header {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -141,8 +142,9 @@ header {
 }
 .mainmenu ul li {
     display: inline-block;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
+    font-family: "Cairo", serif;
+    font-size: 19px;
+    font-weight: bold;
 
 }
 .mainmenu ul li a { 
@@ -296,7 +298,7 @@ address {
 }
 .chess > .pure-u-md-1-2 > .chess-text > .text h2 {
     font-weight: 300;
-    font-family: "Lato",sans-serif;
+    font-family: "Cairo", serif;
     font-size: 32px;
     margin: 0 auto;
     padding: 0;
@@ -310,7 +312,7 @@ address {
 }
 .chess > .pure-u-md-1-2 > .chess-text > .text div {
     font-weight: 300;
-    font-family: "Lato",sans-serif;
+    font-family: "Cairo", serif;
     font-size: 18px;
     margin: 15px auto 0;
     text-align: left;
@@ -319,7 +321,7 @@ address {
 }
 .chess > .pure-u-md-1-2 > .chess-text > .text ul {
     font-weight: 300;
-    font-family: "Lato",sans-serif;
+    font-family: "Cairo", serif;
     font-size: 18px;
     margin: 15px auto 0;
     text-align: left;
@@ -344,7 +346,7 @@ address {
     font-weight: 300;
     font-size: 32px;
     color:#333333;
-    font-family: 'Lato', sans-serif;
+    font-family: "Cairo", serif;
     letter-spacing: normal;
 }
 
@@ -368,7 +370,7 @@ address {
 /* 3 P A G E S  T Y P O*/
 .homepage h1, .about h1, .manufacturing h1, .mobile-title {
     margin: 0 0 15px 0;
-    font-family: "Lato",sans-serif;
+    font-family: "Cairo", serif;
     font-size: 34px;
     font-weight: 300;
     letter-spacing: 0;
@@ -376,7 +378,7 @@ address {
     text-align: center;
 }
 .about ul {
-    font-family: "Lato",sans-serif;
+    font-family: "Cairo", serif;
     font-size: 20px;
     font-weight: 300;
     letter-spacing: 0;
@@ -389,7 +391,7 @@ address {
     margin: 10px 0 0;
 }
 .homepage p, .manufacturing p{
-    font-family: "Lato",sans-serif;
+    font-family: "Cairo", serif;
     font-size: 24px;
     font-weight: 300;
     letter-spacing: 0;
@@ -409,7 +411,7 @@ height: auto;
     height: auto;
 }
 .single-post h2, .single-post h3, .single-post label {
-font-family: 'Lato', sans-serif;
+font-family: "Cairo", serif;
 font-weight: 300;
 letter-spacing: 0;
 }
@@ -434,7 +436,7 @@ hr {
     padding: 25px 0 50px;
 }
 .page h1 {
-    font-family: 'Lato', sans-serif;
+    font-family: "Cairo", serif;
     font-weight: 300;
     letter-spacing: 0;
     text-align: center;
@@ -453,7 +455,7 @@ hr {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'Lato', sans-serif;
+    font-family: "Cairo", serif;
     font-weight: 300;
     letter-spacing: 0;
 }
@@ -462,14 +464,14 @@ hr {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'Lato', sans-serif;
+    font-family: "Cairo", serif;
     font-weight: 300;
     letter-spacing: 0;
 }
 .error-404 p {
     font-size: 2em;
     text-align: center;
-    font-family: 'Lato', sans-serif;
+    font-family: "Cairo", serif;
     font-weight: 300;
     letter-spacing: 0;
 }
@@ -486,7 +488,7 @@ hr {
 .products h3 {
     padding: 5px 0 0;
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: "Cairo", serif;
     font-weight: 300;
 }
 .product-description {
@@ -509,7 +511,7 @@ footer {
 }
 .footer-menu ul li {
     display: inline-block;
-    font-family: 'Lato', sans-serif;
+    font-family: "Cairo", serif;
     font-weight: 300;
 }
 .footer-menu ul li:after {
@@ -533,7 +535,7 @@ footer {
     color: rgba(255, 255, 255, .7);
     padding: 15px 0;
     text-align: right;
-    font-family: 'Lato', sans-serif;
+    font-family: "Cairo", serif;
     font-weight: 300;
 }
 .home-banner { 
@@ -617,11 +619,11 @@ footer {
     }
     .pushmenu { /*this is the nav*/
         background: #135781; /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(#135781, #135781); /* For Safari 5.1 to 6.0 */
+        background: -webkit-linear-gradient(#135781, #4c8e79); /* For Safari 5.1 to 6.0 */
         background: -o-linear-gradient(#135781, #232a6a); /* For Opera 11.1 to 12.0 */
         background: -moz-linear-gradient(#135781, #135781); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(#135781, #135781); /* Standard syntax */
-        font-family: 'Lato', sans-serif;
+        background: linear-gradient(#135781, #4c8e79); /* Standard syntax */
+        font-family: "Cairo", serif;
         width: 240px;
         height: 100%;
         top: 0;
@@ -680,7 +682,7 @@ footer {
     }
     .nav-list i:after{
         content: '\f0c9';
-        font-family: 'FontAwesome';
+        font-family: "Cairo", serif;
         font-style: normal;
     }
     .nav-list.active i:after {
@@ -692,7 +694,7 @@ footer {
         width: 33px;
         font-size: 32px;
         float: left;
-        color: rgb(39, 59, 126);
+        color: rgba(104, 169, 155, 1);
         margin: 20px 0 0 10px;
     }
     .nav-list-shrink {
@@ -702,7 +704,7 @@ footer {
         background-position: -33px top;
     }
     .buttonset {
-    background: #003ba2;
+    background: #00A287;
     height: 16px;
     padding: 10px 20px 20px;
     }
@@ -735,7 +737,7 @@ footer {
     }
     .chess > .pure-u-md-1-2 > .chess-text > .text h2 {
         font-weight: 300;
-        font-family: "Lato",sans-serif;
+        font-family: "Cairo", serif;
         font-size: 32px;
         margin: 0 auto;
         padding: 0;
@@ -745,7 +747,7 @@ footer {
     }
     .chess > .pure-u-md-1-2 > .chess-text > .text div {
         font-weight: 300;
-        font-family: "Lato",sans-serif;
+        font-family: "Cairo", serif;
         font-size: 18px;
         margin: 15px auto 0;
         text-align: center;
@@ -791,7 +793,7 @@ footer {
     /* F O O T E R */
     .footer-copy {
         text-align: center;
-        font-family: 'Lato', sans-serif;
+        font-family: "Cairo", serif;
         letter-spacing: normal;
         margin: 0;
         padding: 15px 0;
@@ -809,7 +811,7 @@ footer {
     line-height: 1.65;
     font-style: normal;
     color: #636778;
-    font-family: 'Raleway';
+    font-family: "Cairo", serif;
     font-style: normal;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #0F2046;
@@ -821,15 +823,14 @@ footer {
 } */
 
 body {
-    font-family: "IBM Plex Sans Arabic", serif;
-
     margin: 0px;
     padding: 0px;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.65;
     font-style: normal;
     color: #636778;
+    font-family: "Cairo", serif;
     background-color: #ffffff;
     text-rendering: optimizelegibility;
     -moz-osx-font-smoothing: grayscale;
@@ -902,7 +903,7 @@ button {
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    font-family: "Heebo", sans-serif;
+    font-family: "Cairo", serif;
 }
 
 a:hover,
@@ -940,7 +941,7 @@ h5,
 h6 {
     font-weight: 700;
     color: #36415a;
-    font-family: "Heebo", sans-serif;
+    font-family: "Cairo", serif;
 }
 
 strong,
@@ -948,7 +949,7 @@ span,
 small,
 label,
 i {
-    font-family: "Heebo", sans-serif;
+    font-family: "Cairo", serif;
 }
 
 .form-item {
@@ -1114,7 +1115,7 @@ i {
     font-weight: 900;
     display: inline-block;
     vertical-align: middle;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo", serif;
 }
 
 .select-option>button i {
@@ -1201,7 +1202,7 @@ i {
     border-radius: 100%;
     border: 2px solid #dee3f3;
     background-color: #ffffff;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo", serif;
     transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
@@ -1535,7 +1536,7 @@ i {
     padding-bottom: 21px;
     display: inline-block;
     text-transform: uppercase;
-    font-family: "Heebo", sans-serif;
+    font-family: "Cairo", serif;
     transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
@@ -1686,7 +1687,7 @@ i {
     color: #334eff;
     margin-bottom: 7px;
     display: inline-block;
-    font-family: "Roboto", sans-serif;
+    font-family: "Cairo", serif;
 }
 
 .section-title .title-text {
@@ -2044,15 +2045,15 @@ button {
 }
 
 .header-section .main-menu .menu-item-has-child>a:after {
-    top: 1px;
-    right: 0px;
+    /* top: 1px; */
+    /* right: 0px; */
     color: #636778;
-    font-size: 13px;
+    font-size: 23px;
     content: "";
     font-weight: 900;
     position: absolute;
     transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
-    font-family: "Line Awesome Free";
+    font-family: "Cairo", serif;
 }
 
 .header-section .main-menu .menu-item-has-child:hover>a:after {
@@ -2745,7 +2746,7 @@ button {
     content: "";
     font-weight: 900;
     position: absolute;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo", serif;
 }
 
 .sidebar-menu-wrapper .sidebar-menu .menu_list>ul li.dropdown ul {
@@ -3395,7 +3396,7 @@ button {
     font-weight: 900;
     color: #334eff;
     position: absolute;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo", serif;
 }
 
 .offer-item .countdown-timer>ul>li {
@@ -3754,7 +3755,7 @@ button {
     font-weight: 400;
     position: absolute;
     text-align: center;
-    font-family: "Heebo", sans-serif;
+    font-family: "Cairo", serif;
 }
 
 /* featured fullimage - end */
@@ -5143,7 +5144,7 @@ button {
     font-weight: 900;
     position: absolute;
     color: #334eff;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo", serif;
 }
 
 .details-section .details-content .tag-links {
@@ -5293,7 +5294,7 @@ button {
     font-weight: 900;
     position: absolute;
     color: #334eff;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo", serif;
 }
 
 .details-section .information-area .table-wrap table {

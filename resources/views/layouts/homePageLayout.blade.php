@@ -18,12 +18,10 @@
     <link rel="stylesheet" href="https://ajapharma.com/wp-content/themes/aja/css/pure.css" type="text/css" />
     <link rel="stylesheet" href="https://ajapharma.com/wp-content/themes/aja/css/responsive.css" type="text/css" />
    
-    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> --}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://ajapharma.com/wp-content/themes/aja/css/lightcase.css" type="text/css" />
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-        </style>
+   
     
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel/dist/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel/dist/assets/owl.theme.default.min.css">
@@ -46,7 +44,7 @@
                         <ul>
                             <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-181 current_page_item menu-item-52"><a href="{{route('index')}}" aria-current="page">الرئيسية</a></li>
                             <li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="{{route('about')}}">من نحن</a></li>
-                            <li id="menu-item-323" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-323"><a href="{{ route('home-products')}}">المنتجات</a></li>
+                            <li id="menu-item-323" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-323"><a href="{{route('home-products')}}">المنتجات</a></li>
                             <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="">توظيف</a></li>
                             <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="{{route('contact')}}">اتصل بنا</a></li>
                             <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="{{route('user-blogs.index')}}">الاخبار</a></li>
