@@ -8,11 +8,11 @@
                     <div class="about-content">
                         <div class="brand-logo mb-4 clearfix">
                             <a href="index.html" class="brand-link">
-                                <img src="{{asset('assets/home/images/logo/medicia_1.png')}}" alt="الشعار_غير_موجود">
+                                <img src="{{asset('assets/home/images/logo/logo_1.png')}}" alt="الشعار_غير_موجود">
                             </a>
                         </div>
                         <p class="mb-30">
-                            "ميديسيا" هي خدمة طبية عبر الإنترنت وثيم WooCommerce لبيع الأدوية، مصممة لتلبية احتياجات متجرك الطبي الإلكتروني.
+                            نحن شركة عالمية رائدة في مجال تصنيع الأدوية، ملتزمون بتقديم حلول طبية مبتكرة وآمنة تلبي احتياجات السوق وتساهم في تحسين جودة حياة المرضى حول العالم.
                         </p>
                         <div class="social-icon-circle ul-li clearfix">
                             <ul class="clearfix">
@@ -30,12 +30,9 @@
                         <h3 class="widget-title">المنتجات</h3>
                         <ul class="clearfix">
                             <li><a href="#!">الأدوية</a></li>
-                            <li><a href="#!">الفيتامينات والمكملات</a></li>
-                            <li><a href="#!">الإكسسوارات</a></li>
                             <li><a href="#!">المعدات الطبية</a></li>
                             <li><a href="#!">جميع المنتجات</a></li>
                             <li><a href="#!">معدات الأطباء</a></li>
-                            <li><a href="#!">العروض والخصومات</a></li>
                         </ul>
                     </div>
                 </div>
@@ -97,7 +94,7 @@
         </div>
 
         <div class="footer-bottom text-center border-top clearfix">
-            <p class="mb-0">© حقوق النشر 2023 <a href="#!">مارفل_ثيم</a>. جميع الحقوق محفوظة.</p>
+            <p class="mb-0">© حقوق النشر 2025 <a href="#!">softindex</a>. جميع الحقوق محفوظة.</p>
         </div>
 
     </div>

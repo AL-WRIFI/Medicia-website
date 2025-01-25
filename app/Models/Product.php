@@ -17,6 +17,7 @@ class Product extends Model
         'sale_price',
         'sub_category_id',
         'image_url',
+        'pdf_url',
         'summary',
         'description',
         'unit_id',

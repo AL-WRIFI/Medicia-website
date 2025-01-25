@@ -34,13 +34,13 @@ class ProductController extends Controller
         $units = Unit::pluck('name', 'id')->toArray();
         return view('admin.products.create', compact('subCategories', 'units'));
     }
-    
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required|string|max:255',
             'sub_category_id' => 'required|exists:sub_categories,id',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif',
+            'pdf' => 'nullable|mimes:pdf|max:2048', // Validate PDF
             'summary' => 'nullable|string',
             'description' => 'nullable|string',
             'unit_id' => 'required|exists:units,id',
@@ -48,7 +48,7 @@ class ProductController extends Controller
             'stock' => 'boolean',
             'status' => 'boolean',
         ]);
-
+    
         $data = $request->only([
             'name',
             'sub_category_id',
@@ -59,17 +59,57 @@ class ProductController extends Controller
             'stock',
             'status',
         ]);
-
+    
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('images', 'public');
-            $url = Storage::url($path);
-            $data['image_url'] = $url;
+            $data['image_url'] = Storage::url($path);
         }
-
-        Product::create(array_merge($data, ['slug' => Str::slug($request->name),'price' => 0, 'sale_price' => 0]));
-
+    
+        if ($request->hasFile('pdf')) {
+            $path = $request->file('pdf')->store('pdfs', 'public'); // Save PDF file
+            $data['pdf_url'] = Storage::url($path);
+        }
+    
+        Product::create(array_merge($data, ['slug' => Str::slug($request->name), 'price' => 0, 'sale_price' => 0]));
+    
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
+    
+    // public function store(Request $request)
+    // {
+    //     $request->validate([
+    //         'name' => 'required|string|max:255',
+    //         'sub_category_id' => 'required|exists:sub_categories,id',
+    //         'image' => 'required|image|mimes:jpg,png,jpeg,gif',
+    //         'summary' => 'nullable|string',
+    //         'description' => 'nullable|string',
+    //         'unit_id' => 'required|exists:units,id',
+    //         'quantity' => 'required|numeric',
+    //         'stock' => 'boolean',
+    //         'status' => 'boolean',
+    //     ]);
+
+    //     $data = $request->only([
+    //         'name',
+    //         'sub_category_id',
+    //         'summary',
+    //         'description',
+    //         'unit_id',
+    //         'quantity',
+    //         'stock',
+    //         'status',
+    //     ]);
+
+    //     if ($request->hasFile('image')) {
+    //         $path = $request->file('image')->store('images', 'public');
+    //         $url = Storage::url($path);
+    //         $data['image_url'] = $url;
+    //     }
+
+    //     Product::create(array_merge($data, ['slug' => Str::slug($request->name),'price' => 0, 'sale_price' => 0]));
+
+    //     return redirect()->route('products.index')->with('success', 'Product created successfully.');
+    // }
 
     public function show(Product $product)
     {

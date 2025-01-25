@@ -15,288 +15,256 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/home/css/jquery-ui.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/home/css/style.css') }}">
 
+    <link rel="stylesheet" href="https://ajapharma.com/wp-content/themes/aja/css/pure.css" type="text/css" />
+    <link rel="stylesheet" href="https://ajapharma.com/wp-content/themes/aja/css/responsive.css" type="text/css" />
+   
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> --}}
+    <link rel="stylesheet" href="https://ajapharma.com/wp-content/themes/aja/css/lightcase.css" type="text/css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel/dist/assets/owl.theme.default.min.css">
     @stack('styles')
     @yield('page-style')
 
 </head>
 
 <body class="home-v2">
-<header id="header-section" class="header-section clearfix">
-
-    <div class="header-middle bg-gray d-flex align-items-center clearfix">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <div class="col-lg-3 col-md-12">
-                    <div class="brand-logo clearfix">
-                        <a href="{{route('index')}}" class="brand-link">
-                            <img src="{{asset('assets/home/images/logo/logo_1.png')}}" style="width: 100px;   padding: 10px;" alt="logo_not_found">
-                        </a>
-
-                        <div class="btns-group ul-li-right clearfix">
-                            <ul class="clearfix">
-                                <li>
-                                    <button type="button" class="mobile-menu-btn">
-                                        <i class="las la-bars"></i>
-                                    </button>
-                                </li>
-                               
-                            </ul>
-                        </div>
-                    </div>
+    <header class="header desktop-header">
+        <div class="wrapper">
+            <div class="pure-g">
+                <div class="pure-u-md-1-5 ">
+                    <a href="https://ajapharma.com/">
+                        <img src="{{asset('assets/home/images/logo/logo_1.png')}}" style="width: 100%;   padding: 10px;"  alt="أجا فارما">
+                    </a>
                 </div>
-
-                <div class="col-lg-9 col-md-12">
-                    <div class="btns-group ul-li-right clearfix">
-                        <ul class="clearfix">
-                            <li>
-                                <form action="#">
-                                    <div class="form-item">
-                                        <input type="search" name="search" placeholder="ابحث عن منتجاتك">
-                                        {{-- <button type="submit"><i class="la la-search"></i></button> --}}
-                                    </div>
-                                </form>
-                            </li>
-                            <li class="dropdown">
-                                <button type="button" class="btn-user" id="user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="lar la-user"></i>
-                                </button>
-                                <div aria-labelledby="user-dropdown" class="user-dropdown dropdown-menu ul-li-block clearfix">
-                                    <div class="profile-info clearfix">
-                                        <a href="#!" class="user-thumbnail">
-                                            <img src="{{asset('assets/home/images/meta/img_2.png')}}" alt="thumbnail_not_found">
-                                        </a>
-                                        <div class="user-content">
-                                            <h4 class="user-name"><a href="#!">راكيبول حسن</a></h4>
-                                            <span class="user-title">بائع</span>
-                                        </div>
-                                    </div>
-                                    <ul class="clearfix">
-                                        <li><a href="#!"><i class="las la-user-circle"></i> الملف الشخصي</a></li>
-                                        <li><a href="#!"><i class="las la-user-cog"></i> الإعدادات</a></li>
-                                        <li><a href="#!"><i class="las la-sign-out-alt"></i> تسجيل الخروج</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            {{-- <li class="dropdown">
-                                <button class="btn-cart" id="cart-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="las la-shopping-bag"></i>
-                                    <small class="cart-counter bg-royal-blue">03</small>
-                                </button>
-                                <div class="cart-dropdown dropdown-menu" aria-labelledby="cart-dropdown">
-                                    <h3 class="title-text">عناصر السلة:- 03</h3>
-
-                                    <div class="cart-items-list ul-li-block clearfix">
-                                        <ul class="clearfix">
-                                            <li>
-                                                <div class="item-image">
-                                                    <img src="{{asset('assets/home/images/cart/img_1.png')}}" alt="image_not_found">
-                                                </div>
-                                                <div class="item-content">
-                                                    <h4 class="item-title">ميزان حرارة رقمي</h4>
-                                                    <span class="item-price">$39.50</span>
-                                                </div>
-                                                <button type="button" class="remove-btn"><i class="las la-times"></i></button>
-                                            </li>
-
-                                            <li>
-                                                <div class="item-image">
-                                                    <img src="{{asset('assets/home/images/cart/img_2.png')}}" alt="image_not_found">
-                                                </div>
-                                                <div class="item-content">
-                                                    <h4 class="item-title">ميزان حرارة رقمي بالأشعة تحت الحمراء</h4>
-                                                    <span class="item-price">$39.50</span>
-                                                </div>
-                                                <button type="button" class="remove-btn"><i class="las la-times"></i></button>
-                                            </li>
-
-                                            <li>
-                                                <div class="item-image">
-                                                    <img src="{{asset('assets/home/images/cart/img_3.png')}}" alt="image_not_found">
-                                                </div>
-                                                <div class="item-content">
-                                                    <h4 class="item-title">جهاز قياس ضغط الدم الرقمي</h4>
-                                                    <span class="item-price">$39.50</span>
-                                                </div>
-                                                <button type="button" class="remove-btn"><i class="las la-times"></i></button>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="btns-group ul-li clearfix">
-                                        <ul class="clearfix">
-                                            <li><a href="cart.html" class="btn bg-default-black">عرض السلة</a></li>
-                                            <li><a href="checkout.html" class="btn bg-royal-blue">الدفع</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li> --}}
-                        </ul>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="header-bottom d-flex align-items-center clearfix">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <div class="col-lg-2">
-                    <div class="all-categories clearfix">
-                        <button type="button" class="category-btn" data-toggle="collapse" data-target="#categories-collapse" aria-expanded="false" aria-controls="categories-collapse">
-                            <i class="las la-bars"></i> 
-                            جميع الفئات
-                        </button>
-
-                        <div id="categories-collapse" class="categories-collapse collapse">
-                            <div class="card card-body ul-li-block">
-                                <ul class="clearfix">
-                                    <li><a href="#!"><span><i class="las la-microscope"></i></span> معدات</a></li>
-                                    <li><a href="#!"><span><i class="las la-capsules"></i></span> الأدوية العامة</a></li>
-                                    <li><a href="#!"><span><i class="las la-dna"></i></span> المكملات الغذائية</a></li>
-                                    <li><a href="#!"><span><i class="las la-first-aid"></i></span> الصيدلية</a></li>
-                                    <li><a href="#!"><span><i class="las la-stethoscope"></i></span> الأدوات الطبية</a></li>
-                                    <li><a href="#!"><span><i class="las la-syringe"></i></span> معدات الجراحة</a></li>
-                                    <li><a href="#!"><span><i class="las la-brain"></i></span> طب الأعصاب</a></li>
-                                    <li><a href="#!"><span><i class="las la-x-ray"></i></span> العظام</a></li>
-                                    <li><a href="#!"><span><i class="las la-thermometer"></i></span> أدوية السكري</a></li>
-                                    <li><a href="#!"><span><i class="las la-user-nurse"></i></span> معدات العناية المركزة</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-8">
-                    <nav class="main-menu ul-li-center clearfix">
-                        <ul class="clearfix">
-                            <li class="active">
-                                <a href="{{route('index')}}">الرئيسية</a>
-                            </li>
-                            <li><a href="{{ route('about') }}">من نحن</a></li>
-                            {{-- <li class="menu-item-has-child">
-                                <a href="#!">منتجاتنا</a>
-                                <div class="mega_menu">
-                                    <div class="row">
-                                        <div class="col-lg-3">
-                                            <div class="useful-links ul-li-block clearfix">
-                                                <h3 class="list-title">المعدات الطبية</h3>
-                                                <ul class="clearfix">
-                                                    <li><a href="#!">جهاز قياس ضغط الدم</a></li>
-                                                    <li><a href="#!">حقيبة الإسعافات الأولية</a></li>
-                                                    <li><a href="#!">ميزان الحرارة الرقمي</a></li>
-                                                    <li><a href="#!">الكمامة الجراحية</a></li>
-                                                    <li><a href="#!">السماعة الطبية الرقمية</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-3">
-                                            <div class="useful-links ul-li-block clearfix">
-                                                <h3 class="list-title">الأدوية</h3>
-                                                <ul class="clearfix">
-                                                    <li><a href="#!">الأدوية العامة</a></li>
-                                                    <li><a href="#!">أنسولين السكري</a></li>
-                                                    <li><a href="#!">المكملات الغذائية</a></li>
-                                                    <li><a href="#!">أدوية الأطفال</a></li>
-                                                    <li><a href="#!">أدوية الحمل</a></li>
-                                                    <li><a href="#!">الصحة والجمال</a></li>
-                                                    <li><a href="#!">العظام</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-3">
-                                            <div class="useful-links ul-li-block clearfix">
-                                                <h3 class="list-title">الأدوات الطبية</h3>
-                                                <ul class="clearfix">
-                                                    <li><a href="#!">Accu Chek Active</a></li>
-                                                    <li><a href="#!">جهاز قياس السكر</a></li>
-                                                    <li><a href="#!">جهاز الجبائر</a></li>
-                                                    <li><a href="#!">مقياس التأكسج</a></li>
-                                                    <li><a href="#!">الميكروسكوب</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-3">
-                                            <div class="promotion-fullimage clearfix">
-                                                <a href="#!" class="item-image">
-                                                    <img src="{{asset('assets/home/images/promotion/img_8.jpg')}}" alt="image_not_found">
-                                                </a>
-                                                <div class="promotion-content position-top">
-                                                    <small class="d-block text-white mb-1">المستلزمات الطبية</small>
-                                                    <h3 class="item-title">
-                                                        <span class="d-block">مستلزمات طبية لفيروس كورونا</span> <span class="d-block">المستلزمات الطبية</span>
-                                                    </h3>
-                                                    <a href="#!" class="btn-underline">تسوق الآن</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li> --}}
-                            <li class="menu-item-has-child">
-                                <a href="#!">منتجاتنا</a>
-                                <div class="mega_menu">
-                                    <div class="row">
-                                        @foreach( $categories as $category)
-                                            <div class="col-lg-3">
-                                                <div class="useful-links ul-li-block clearfix">
-                                                    <h3 class="list-title">{{ $category->name }}</h3>
-                                                    <ul class="clearfix">
-                                                        @foreach($category->subCategories as $subCategory)
-                                                            <li><a href="#!">{{ $subCategory->name }}</a></li>
-                                                        @endforeach
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                            
-                                        <div class="col-lg-3">
-                                            <div class="promotion-fullimage clearfix">
-                                                <a href="#!" class="item-image">
-                                                    <img src="{{asset('assets/home/images/promotion/img_8.jpg')}}" alt="image_not_found">
-                                                </a>
-                                                <div class="promotion-content position-top">
-                                                    <small class="d-block text-white mb-1">المستلزمات الطبية</small>
-                                                    <h3 class="item-title">
-                                                        <span class="d-block">مستلزمات طبية لفيروس كورونا</span>
-                                                        <span class="d-block">المستلزمات الطبية</span>
-                                                    </h3>
-                                                    <a href="#!" class="btn-underline">تسوق الآن</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="{{ route('user-blogs.index')}}">الاخبار</a>
-                            </li>
-                            <li><a href="{{ route('contact')}}">اتصل بنا</a></li>
+                <div class="pure-u-md-3-5">
+                    <nav class="mainmenu" id="menu">
+                        <ul>
+                            <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-181 current_page_item menu-item-52"><a href="{{route('index')}}" aria-current="page">الرئيسية</a></li>
+                            <li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="{{route('about')}}">من نحن</a></li>
+                            <li id="menu-item-323" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-323"><a href="{{ route('home-products')}}">المنتجات</a></li>
+                            <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="">توظيف</a></li>
+                            <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="{{route('contact')}}">اتصل بنا</a></li>
+                            <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="{{route('user-blogs.index')}}">الاخبار</a></li>
                         </ul>
                     </nav>
                 </div>
+                <div class="pure-u-md-1-5">
+                    <ul class="social-icons">
+                        <li><a href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="header mobile-header">
+        <div class="nav-list"><i></i></div>
+        <div class="">
+            <a href="https://ajapharma.com/" style="font-size: 30px; color: #183147; padding: 16px;">
+                العالمية المثالية
+                {{-- <img src="{{asset('assets/home/images/logo/logo_1.png')}}"alt="أجا فارما"> --}}
+            </a>
+        </div>
+    </header>
+    <nav class="pushmenu pushmenu-left">
+        <h3>Menu</h3>
+        <br>
+        <ul>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-181 current_page_item menu-item-52"><a href="{{route('index')}}" aria-current="page">الرئيسية</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="{{route('about')}}">من نحن</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-323"><a href="">المنتجات</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="">توظيف</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="{{route('contact')}}">اتصل بنا</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="{{route('user-blogs.index')}}">الاخبار</a></li>
+        </ul>
+       
+    </nav>
+    {{-- <div class="pure-g" id="page-181">
 
-                <div class="col-lg-2">
-                    <div class="social-icon ul-li-right clearfix">
-                        <ul class="clearfix">
-                            <li><a href="#!"><i class="lab la-facebook"></i></a></li>
-                            <li><a href="#!"><i class="lab la-twitter"></i></a></li>
-                            <li><a href="#!"><i class="lab la-instagram"></i></a></li>
-                            <li><a href="#!"><i class="lab la-pinterest-p"></i></a></li>
-                        </ul>
-                    </div>
+        <!-- MasterSlider -->
+        <div id="P_MS6576b62d473e0" class="master-slider-parent ms-parent-id-1">
+
+
+            <!-- MasterSlider Main -->
+            <div id="MS6576b62d473e0" class="master-slider ms-skin-default">
+
+                <div class="ms-slide" data-delay="12" data-fill-mode="fill">
+                    <img decoding="async" src="http://ajapharma.com/wp-content/plugins/masterslider/public/assets/css/blank.gif" alt="" title="" data-src="http://ajapharma.com/wp-content/uploads/2015/11/Aja-Sliders-first5.png" />
+
+
+                </div>
+                <div class="ms-slide" data-delay="12" data-fill-mode="fill">
+                    <img decoding="async" src="http://ajapharma.com/wp-content/plugins/masterslider/public/assets/css/blank.gif" alt="" title="" data-src="http://ajapharma.com/wp-content/uploads/2015/11/Aja-Sliders-capacity6.png" />
+
+
                 </div>
 
             </div>
+            <!-- END MasterSlider Main -->
+
+
         </div>
-    </div>
-</header>
+        <!-- END MasterSlider -->
+
+        <script>
+            (function($) {
+                "use strict";
+
+                $(function() {
+                    var masterslider_73e0 = new MasterSlider();
+
+                    // slider controls
+                    masterslider_73e0.control('arrows', {
+                        autohide: true,
+                        overVideo: true,
+                        hideUnder: 768
+                    });
+                    masterslider_73e0.control('bullets', {
+                        autohide: false,
+                        overVideo: true,
+                        dir: 'h',
+                        align: 'bottom',
+                        space: 6,
+                        margin: 10
+                    });
+                    masterslider_73e0.control('timebar', {
+                        autohide: true,
+                        overVideo: true,
+                        align: 'top',
+                        color: '#FFFFFF',
+                        width: 4
+                    });
+                    // slider setup
+                    masterslider_73e0.setup("MS6576b62d473e0", {
+                        width: 1000,
+                        height: 500,
+                        minHeight: 0,
+                        space: 0,
+                        start: 1,
+                        grabCursor: false,
+                        swipe: true,
+                        mouse: false,
+                        keyboard: false,
+                        layout: "fullwidth",
+                        wheel: false,
+                        autoplay: true,
+                        instantStartLayers: true,
+                        loop: true,
+                        shuffle: false,
+                        preload: 0,
+                        heightLimit: true,
+                        autoHeight: true,
+                        smoothHeight: true,
+                        endPause: false,
+                        overPause: true,
+                        fillMode: "fill",
+                        centerControls: false,
+                        startOnAppear: false,
+                        layersMode: "center",
+                        autofillTarget: "",
+                        hideLayers: false,
+                        fullscreenMargin: 0,
+                        speed: 20,
+                        dir: "h",
+                        view: "basic"
+                    });
+
+
+
+                    window.masterslider_instances = window.masterslider_instances || [];
+                    window.masterslider_instances.push(masterslider_73e0);
+                });
+
+            })(jQuery);
+        </script>
+
+
+        <div class="pure-u-md-1 homepage">
+            <h1>إمكانيات ضخمة… لشراكات عملاقة</h1>
+            <p>يعتبرمصنع أجا فارما علامة تكنولوجية مميزة بين مصانع الأدوية بالشرق الأوسط بإمكانياته الضخمة و قد استخدم في إنشائه أحدث التقنيات المعروفة عالميا في مجال صناعة الأدوية. يقع المصنع في المدينة الصناعية بحائل شمالي المملكة العربية السعودية،
+                ويطمح إلى تقديم أعلى و أحدث مستويات الجودة في صناعة الأدوية على مستوى منطقة الشرق الأوسط بأكملها.</p>
+        </div>
+        <div class="chess clearfix">
+            <div class="pure-u-md-1-2 item float-left">
+                <div class="chess-text">
+                    <div class="text">
+                        <h2>الموقع المتميز</h2>
+                        <div>
+                            كان اختيار الموقع المناسب للمصنع أمراً ذا أهمية قصوى بالنسبة لنا، لذا تم اختيار المدينة الصناعية بحائل كموقع أمثل للمصنع؛ لما تتميز به من موقع إستراتيجي يسهل عمليات النقل و التوزيع برا و بحرا و جوا، كما يتوفر بها خطوط للسكك الحديدية يمكننا من شحن المنتجات
+                            إلى كافة مدن المملكة. و قد أُنشئ المصنع على قطعة أرضٍ مساحتها ١٢٠ ألف مترا مربعا، تحوي كل مباني المصنع الحالية بالإضافة لوجود مساحات فارغة للتوسعات المستقبلية.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-md-1-2 item image"><img decoding="async" src="http://ajapharma.com/wp-content/themes/aja/images/map.jpg" /></div>
+        </div>
+        <div class="chess clearfix">
+            <div class="pure-u-md-1-2 item float-right">
+                <div class="chess-text">
+                    <div class="text">
+                        <h2>الجودة هي كل شيء</h2>
+                        <div>تم تصميم عمليات مراقبة الجودة لتفي بكافة معايير التصنيع الدوائي العالمية الحديثة و معايير الآيزو لتشغيل المصانع من خلال معاملنا المجهزة بأحدث الأجهزة و التقنيات، و ذلك من خلال فريق مراقبة الجودة بالمصنع المؤهلين علميا، للتأكد
+                            من كافة المدخلات المستخدمة من مواد تصنيعية و خطوات تشغيلية و اعتمادها قبل الموافقة على تسليم أي منتج نهائي بالأسواق.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-md-1-2 item image"><img decoding="async" src="http://ajapharma.com/wp-content/themes/aja/images/quilty.jpg" /></div>
+        </div>
+        <div class="chess clearfix">
+            <div class="pure-u-md-1-2 item float-left">
+                <div class="chess-text">
+                    <div class="text">
+                        <h2>الخبرة المنتقاة ..</h2>
+                        <div>يعمل في المصنع نخبةٌ من الكفاءات المنتقاة بعناية محليا و دوليا، لكي تلبي أحدث معايير التشغيل والإنتاج المطلوبة.<br /> كما يعمل معنا فريق من المحترفين الذين يحصلون على التدريب المتواصل ليقوموا بتوصيل منتجاتنا بالشكل اللائق لكافة
+                            الأسواق المستهدفة.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-md-1-2 item image"><img decoding="async" src="http://ajapharma.com/wp-content/themes/aja/images/development.jpg" /></div>
+        </div>
+        <div class="chess clearfix">
+            <div class="pure-u-md-1-2 item float-right">
+                <div class="chess-text">
+                    <div class="text">
+                        <h2>استيفاء المتطلبات الرقابية</h2>
+                        <div>تم تجهيز المصنع بأحدث معدات و طرق تصنيع الدواء و أدق الأجهزة التكنولوجية لتتوافق منتجاته مع متطلبات الهيئة السعودية للغذاء والدواء، والهيئة الأمريكية للغذاء والدواء، وكذلك المواصفات الدوائية المعتمدة بالدول الأوروبية.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-md-1-2 item image"><img decoding="async" src="http://ajapharma.com/wp-content/themes/aja/images/machinery.jpg" /></div>
+        </div>
+        <div class="partners pure-u-md-1 clearfix">
+            <h2>شركاء النجاح</h2>
+            <div class="pure-u-md-1">
+                <div class="lshowcase-clear-both">&nbsp;</div>
+                <div class="lshowcase-logos ">
+                    <div style='display:none;' class='lshowcase-wrap-carousel-0'>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2015/11/genepharm.png' width='150' height='49' alt='genepharm' title='' class='lshowcase-hover-grayscale' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2015/11/medochemie-200x102.jpg' width='200' height='102' alt='medochemie' title='' class='lshowcase-hover-grayscale' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2015/11/lundbeck.jpg' width='193' height='76' alt='lundbeck' title='' class='lshowcase-hover-grayscale' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2015/11/chanelle.jpg' width='187' height='95' alt='chanelle' title='' class='lshowcase-hover-grayscale' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2015/11/gedeon-richter-200x29.jpg' width='200' height='29' alt='gedeon-richter' title='' class='lshowcase-hover-grayscale' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2021/04/helm.png' width='172' height='111' alt='Helm' title='' class='lshowcase-hover-grayscale' style='height:auto; max-width:80%;' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2021/04/abbott.png' width='171' height='98' alt='abbot' title='' class='lshowcase-hover-grayscale' style='height:auto; max-width:80%;' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2021/04/aspen.jpg' width='166' height='103' alt='aspen' title='' class='lshowcase-hover-grayscale' style='height:auto; max-width:80%;' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2021/04/logo-200x107.png' width='200' height='107' alt='elpen' title='' class='lshowcase-hover-grayscale' style='height:auto; max-width:80%;' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2021/04/mtecnimede-200x32.png' width='200' height='32' alt='tm tecnimede' title='' class='lshowcase-hover-grayscale' style='height:auto; max-width:90%;' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2021/04/pharmathen-200x69.jpg' width='200' height='69' alt='pharmathen' title='' class='lshowcase-hover-grayscale' style='height:auto; max-width:90%;' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2021/04/servier-200x91.png' width='200' height='91' alt='servier' title='' class='lshowcase-hover-grayscale' style='height:auto; max-width:80%;' /></div>
+                        <div class="lshowcase-slide lshowcase-horizontal-slide"><img src='https://ajapharma.com/wp-content/uploads/2019/05/Novartis_Large-e1558436571438-200x128.png' width='200' height='128' alt='Novartis' title='' class='lshowcase-hover-grayscale' style='height:auto; max-width:80%;' /></div>
+                    </div>
+                </div>
+                <div class="lshowcase-clear-both">&nbsp;</div>
+            </div>
+        </div>
+    </div> --}}
 
 
 {{-- <!-- backtotop - start -->
@@ -688,6 +656,18 @@
 
   <!-- Custom JS -->
   <script src="{{ asset('assets/home/js/custom.js') }}"></script>
+
+
+
+
+
+  {{-- <script src="https://ajapharma.com/wp-content/themes/aja/js/jQuery.js"></script> --}}
+    {{-- <script src="https://ajapharma.com/wp-content/themes/aja/js/equalHeights.js"></script> --}}
+    {{-- <script src="https://ajapharma.com/wp-content/themes/aja/js/matchMedia.js"></script> --}}
+    {{-- <script src="https://ajapharma.com/wp-content/themes/aja/js/lightcase.js"></script> --}}
+    <script src="https://ajapharma.com/wp-content/themes/aja/js/init.js"></script>
+
+   
 </body>
 
 </html>

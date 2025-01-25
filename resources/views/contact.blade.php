@@ -3,7 +3,7 @@
 @section('title', 'اتصل بنا')
 
 @section('layoutContent')
-
+<br>
 <main dir="rtl">
 
     <section id="breadcrumb-section" class="breadcrumb-section d-flex align-items-center decoration-wrap clearfix" data-background="{{asset('assets/home/images/background/bg_1.jpg')}}">

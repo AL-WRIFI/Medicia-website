@@ -75,6 +75,10 @@
               <input type="file" class="form-control" name="image" id="basic-default-upload-file" accept="image/*" required/>
             </div>
             <div class="mb-6">
+              <label for="pdf">Upload PDF</label>
+              <input type="file" name="pdf" id="pdf" class="form-control" accept="application/pdf">
+            </div>
+            <div class="mb-6">
               <label class="form-label" for="ecommerce-product-summary">Summary</label>
               <textarea class="form-control" id="ecommerce-product-summary" placeholder="Product summary" name="summary" aria-label="Product summary"></textarea>
             </div>
@@ -104,40 +108,15 @@
             </div>
           </div>
         </div>
-        <!-- /Product Information -->
-
-        <!-- Media -->
-        {{-- <div class="card mb-6">
-          <div class="card-header d-flex justify-content-between align-items-center">
-            <h5 class="mb-0 card-title">Product Image</h5>
-            <a href="javascript:void(0);" class="fw-medium">Add media from URL</a>
-          </div>
-          <div class="card-body">
-            <div class="dropzone needsclick p-0" id="dropzone-basic">
-              <div class="dz-message needsclick">
-                <p class="h4 needsclick pt-3 mb-2">Drag and drop your image here</p>
-                <p class="h6 text-muted d-block fw-normal mb-2">or</p>
-                <span class="note needsclick btn btn-sm btn-label-primary" id="btnBrowse">Browse image</span>
-              </div>
-              <div class="fallback">
-                <input name="image" type="file" />
-              </div>
-            </div>
-          </div>
-        </div> --}}
-        <!-- /Media -->
+        
       </div>
-      <!-- /First column -->
-
-      <!-- Second column -->
+     
       <div class="col-12 col-lg-4">
-        <!-- Organize Card -->
         <div class="card mb-6">
           <div class="card-header">
             <h5 class="card-title mb-0">Organize</h5>
           </div>
           <div class="card-body">
-            <!-- Sub Category -->
             <div class="mb-6">
               <label class="form-label" for="ecommerce-product-sub-category">Sub Category</label>
               <select class="form-select" id="ecommerce-product-sub-category" name="sub_category_id" required>
@@ -146,7 +125,6 @@
                 @endforeach
               </select>
             </div>
-            <!-- Unit -->
             <div class="mb-6">
               <label class="form-label" for="ecommerce-product-unit">Unit</label>
               <select class="form-select" id="ecommerce-product-unit" name="unit_id" required>
@@ -157,17 +135,9 @@
             </div>
           </div>
         </div>
-        <!-- /Organize Card -->
       </div>
-      <!-- /Second column -->
     </div>
-
-    <!-- Save Button -->
-    {{-- <div class="text-end mt-4">
-      <button type="submit" class="btn btn-primary">Save Product</button>
-    </div> --}}
   </form>
-  <!-- /Form -->
 </div>
 
 <script>

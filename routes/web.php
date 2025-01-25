@@ -84,3 +84,8 @@ Route::prefix('admin')->group(function(){
 
 Route::resource('user-blogs', BlogController::class);
 
+Route::get('/products-by-category', [HomePageController::class, 'getProductsByCategory'])->name('products.byCategory');
+
+Route::get('/product-details/{id}', [HomePageController::class, 'productDitails'])->name('product-details');
+
+Route::get('home-products', [HomePageController::class, 'products'])->name('home-products');
